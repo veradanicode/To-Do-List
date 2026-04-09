@@ -9,14 +9,16 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    background-color: aquamarine;
-    min-height:100vh;
+    max-height:100vh;
+    width:100%;
+    background: white;
 }
 .card{
      margin: 8% 30%;
-    background-color: white;
+    background: #020024;
+    background: linear-gradient(327deg,rgba(2, 0, 36, 1) 0%, rgba(48, 209, 169, 1) 36%, rgba(46, 172, 147, 1) 39%, rgba(35, 10, 51, 1) 100%);
     border-radius: 25px;
-    padding:4% 3%;
+    padding:4% 5%;
     flex: 1;
     min-height: 70vh;
 }
@@ -31,36 +33,63 @@
     font-size: 3em;
 }
 .export-btn{
-    background-color: green;
-    padding: 18px 24px;
-    color: white;
+    background-color: white;
+    padding:16px 18px ;
+    color: black;
     border-radius: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: transform,font-weight 0.3s ease;
+   
+
+}
+
+
+.export-btn:hover{
+   transform:scale(1.05);
+   font-weight: 700;
+    cursor: pointer;
 }
 
 .search-tag{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin:0 20px 40px 20px;
-    border: 1px solid black;
+    margin-bottom: 40px;
+    border: 1px solid white;
     border-radius: 18px;
     overflow: hidden;
 
-    
 }
 
 .search-tag input{
     flex: 1;
     border:none;
     padding: 10px;
+    background: transparent;
+    outline:none;
+    font-size:20px;
+    &::placeholder{
+        color: rgb(0, 0, 0);
+        font-size: 18px;
+        font-style: italic;
+    }
 }
 
 .add-btn{
-    background-color: green;
+    background-color: white;
     padding: 18px 24px;
-    color: white;
+    color: black;
     border-radius: 0 16px 16px  0;
+    font-weight: 600;
+    transition: transform,font-weight 0.3s ease;
+   
 
+}
+.add-btn:hover{
+   transform:scale(1.05);
+   font-weight: 700;
+    cursor: pointer;
 }
 
 a{
@@ -70,12 +99,20 @@ a{
 li{
     list-style: none;
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
     border-radius: 8px;
+    transition: transform, 0.3s ease;
+   
+
+}
+li:hover{
+   transform:scale(1.01);
+   font-weight: 700;
+    cursor: pointer;
 }
 
 .delete-btn{
@@ -83,4 +120,33 @@ li{
     padding: 10px 18px;
     color: white;
     border-radius: 8px;
+    font-weight: 600;
+    transition: transform,font-weight 0.3s ease;
+   
+
+}
+.delete-btn:hover{
+   transform:scale(1.1);
+   font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+    .card {
+        margin: 20% 10%;
+        padding: 4% 5%;
+    }
+    .top h1 {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        margin: 30% 5%;
+        padding: 4% 5%;
+    }
+        .top h1 {
+            margin-top: 2%;
+        }
 }
