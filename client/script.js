@@ -21,3 +21,12 @@ function addTask(){
     }
     inputField.value="";
 }
+
+//Add click listener for delete button
+document.getElementById('tasklist').addEventListener('click', (event) => {
+    if (event.target.classList.contains('deleteBtn')) {
+        event.target.closest('li').remove(); // Deletes the closest list item
+    }
+});
+
+
