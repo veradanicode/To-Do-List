@@ -9,14 +9,14 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    max-height:100vh;
+    height:100%;
     width:100%;
     background: white;
 }
 .card{
-     margin: 8% 30%;
+    margin: 5% 30%;
     background: #020024;
-    background: linear-gradient(327deg,rgba(2, 0, 36, 1) 0%, rgba(48, 209, 169, 1) 36%, rgba(46, 172, 147, 1) 39%, rgba(35, 10, 51, 1) 100%);
+    background: linear-gradient(0deg,rgba(2, 0, 36, 1) 0%, rgba(46, 172, 147, 1) 39%, rgba(35, 10, 51, 1) 100%);
     border-radius: 25px;
     padding:4% 5%;
     flex: 1;
@@ -31,6 +31,7 @@
 }
 .top h1{
     font-size: 3em;
+    color: white;
 }
 .export-btn{
     background-color: white;
@@ -59,7 +60,7 @@
     border: 1px solid white;
     border-radius: 18px;
     overflow: hidden;
-
+    
 }
 
 .search-tag input{
@@ -70,10 +71,12 @@
     outline:none;
     font-size:20px;
     &::placeholder{
-        color: rgb(0, 0, 0);
+        color: white;
         font-size: 18px;
         font-style: italic;
     }
+    width: 100%;
+    color: white;
 }
 
 .add-btn{
@@ -106,6 +109,7 @@ li{
     margin-bottom: 20px;
     border-radius: 8px;
     transition: transform, 0.3s ease;
+    color: white;
    
 
 }
@@ -114,8 +118,11 @@ li:hover{
    font-weight: 700;
     cursor: pointer;
 }
+li span{
+    cursor:text;
+}
 
-.delete-btn{
+.deleteBtn{
     background-color: red;
     padding: 10px 18px;
     color: white;
@@ -125,7 +132,7 @@ li:hover{
    
 
 }
-.delete-btn:hover{
+.deleteBtn:hover{
    transform:scale(1.1);
    font-weight: 700;
     cursor: pointer;
@@ -133,7 +140,7 @@ li:hover{
 
 @media (max-width: 1080px) {
     .card {
-        margin: 20% 10%;
+        margin: 5% 10%;
         padding: 4% 5%;
     }
     .top h1 {
@@ -143,10 +150,11 @@ li:hover{
 
 @media (max-width: 600px) {
     .card {
-        margin: 30% 5%;
+        margin: 15% 5%;
         padding: 4% 5%;
     }
         .top h1 {
             margin-top: 2%;
+            font-size: 2.5em;
         }
 }
