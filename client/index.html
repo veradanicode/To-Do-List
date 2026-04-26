@@ -4,34 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>To-Do-List</title>
 </head>
 <body>
     <div class="container" >
         <div class="card">
            <div class="top">
-             <h1>To-Do List</h1>
-            <a href="#" class="export-btn">Export to Excel</a>
+             <div class="top-left">
+                <h1>To-Do List</h1>
+                <div class="progress">
+                    <label for="task-list">Progress:</label>
+                <progress id="task-list"></progress>
+                </div>
+             </div>
+            <label class="circle" for="task-list">1/3</label>
            </div>
           <div class="search-tag">
               <search>
                 <input type="text"id="inputField" size="2000" placeholder="Add a new task...">
               </search>
-            <a class="add-btn" onclick="addTask()">Add</a>
+            <a class="add-btn" onclick="addTask()"><i class="fa fa-plus" style="font-size:18px;color:white"></i></a>
           </div>
             <ul class="task-list" id="tasklist">
                 <li >
                     <span >Sample Task 1</span>
-                    <a href="#" class="deleteBtn">Delete</a>
+                    <a href="#" class="deleteBtn"><i class="fa fa-trash-o" style="font-size:18px;color:white"></i></a>
                 </li>
                 <li>
                     <span>Sample Task 2</span>
-                    <a href="#" class="deleteBtn">Delete</a>
+                    <a href="#" class="deleteBtn"><i class="fa fa-trash-o" style="font-size:18px;color:white"></i></a>
                 </li>
                   <li>
                     <span>Sample Task 3</span>
-                    <a href="#" class="deleteBtn">Delete</a>
+                    <a href="#" class="deleteBtn"><i class="fa fa-trash-o" style="font-size:18px;color:white"></i></a>
                 </li>
             </ul>
 
