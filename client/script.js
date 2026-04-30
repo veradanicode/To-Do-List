@@ -12,20 +12,26 @@ function addTask(){
         const span=document.createElement("span");
         span.textContent=inputField.value;
         const deleteBtn=document.createElement("a");
-        deleteBtn.textContent="Delete";
+        deleteBtn.innerHTML='<i class="fa fa-trash-o" style="font-size:18px;color:white"></i>';
         deleteBtn.classList.add("deleteBtn");
         deleteBtn.href="#";
         li.appendChild(span);
         li.appendChild(deleteBtn);
         tasklist.appendChild(li);
+        const progress=document.getElementById("task-list");
+        progress.value=tasklist.children.length;
+        progress.max=tasklist.children.length;
+
+        
     }
     inputField.value="";
 }
 
 //Add click listener for delete button
 document.getElementById('tasklist').addEventListener('click', (event) => {
-    if (event.target.classList.contains('deleteBtn')) {
-        event.target.closest('li').remove(); // Deletes the closest list item
+    const deleteBtn=event.target.closest('.deleteBtn');
+    if (deleteBtn) {
+        deleteBtn.parentElement.remove();
     }
 });
 
