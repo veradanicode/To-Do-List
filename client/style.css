@@ -11,13 +11,13 @@
     justify-content: center;
     min-height:100vh;
     width:100%;
-    background: url('assets/ok.jpg') no-repeat center center/cover;
+    background: #00008B;
     
 }
 .card{
     margin: 5% 30%;
-    background:transparent;
-    border: 1px solid white;
+    background:#1d1160;
+    border: 1px solid white ;
     border-radius: 25px;
     padding:4% 5%;
     flex: 1;
@@ -49,7 +49,7 @@
     flex-direction: column;
 }
 .circle{
-    background-color: #620e9e;
+    background-color: #0001CD;
     color: rgb(255, 255, 255);
     border-radius: 50%;
     width: 100px;
@@ -90,7 +90,7 @@
 }
 
 .add-btn{
-    background-color: #620e9e;
+    background-color: #0000CD;
     padding: 18px 24px;
     border-radius: 0 16px 16px  0;
     font-weight: 600;

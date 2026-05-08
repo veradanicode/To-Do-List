@@ -7,8 +7,8 @@ const connectToDB = require('./database/db');
 // Connect to MongoDB
 connectToDB();
 
-    
-
+app.use(cors());
+app.use(express.json());
 
 app.listen(port, () => {
   console.log(` To-Do app listening at http://localhost:${port}`);
